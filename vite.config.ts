@@ -14,4 +14,29 @@ export default defineConfig(({ mode }) => ({
             '@': path.resolve(__dirname, './src'),
         },
     },
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    vendor: ['react', 'react-dom', 'react-router-dom'],
+                    ui: [
+                        '@radix-ui/react-accordion',
+                        '@radix-ui/react-alert-dialog',
+                        'lucide-react',
+                        'cmdk',
+                        'sonner',
+                        'vaul',
+                    ],
+                    forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
+                    utils: [
+                        'class-variance-authority',
+                        'clsx',
+                        'tailwind-merge',
+                        'date-fns',
+                    ],
+                    heavy: ['recharts', 'p5', '@tanstack/react-query'],
+                },
+            },
+        },
+    },
 }))

@@ -1,6 +1,13 @@
-import DriveAnimation from '@/components/animations/DriveAnimation'
-import WorkAnimation from '@/components/animations/WorkAnimation'
-import HomeAnimation from '@/components/animations/HomeAnimation'
+import React from 'react'
+const DriveAnimation = lazy(() =>
+    import('@/components/animations/DriveAnimation')
+)
+const WorkAnimation = lazy(() =>
+    import('@/components/animations/WorkAnimation')
+)
+const HomeAnimation = lazy(() =>
+    import('@/components/animations/HomeAnimation')
+)
 
 const Index = () => {
     return (
@@ -54,3 +61,8 @@ const Index = () => {
 }
 
 export default Index
+function lazy<T extends React.ComponentType<unknown>>(
+    importFn: () => Promise<{ default: T }>
+): React.LazyExoticComponent<T> {
+    return React.lazy(importFn)
+}
