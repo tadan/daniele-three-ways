@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "section-text": "hsl(var(--section-text))",
+        "section-text-secondary": "hsl(var(--section-text-secondary))",
+      },
+      backgroundImage: {
+        "gradient-drive": "var(--gradient-drive)",
+        "gradient-work": "var(--gradient-work)",
+        "gradient-home": "var(--gradient-home)",
       },
       borderRadius: {
         lg: "var(--radius)",

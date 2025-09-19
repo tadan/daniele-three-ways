@@ -38,6 +38,15 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Section Gradients */
+    --gradient-drive: linear-gradient(135deg, 280 100% 70%, 260 100% 85%);
+    --gradient-work: linear-gradient(135deg, 142 76% 36%, 158 64% 52%);
+    --gradient-home: linear-gradient(135deg, 25 95% 53%, 31 100% 71%);
+
+    /* Text Colors */
+    --section-text: 0 0% 100%;
+    --section-text-secondary: 0 0% 90%;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
