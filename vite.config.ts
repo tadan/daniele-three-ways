@@ -21,8 +21,10 @@ export default defineConfig(({ mode }) => ({
                 manualChunks: {
                     vendor: ['react', 'react-dom', 'react-router-dom'],
                     ui: [
+                        // All your @radix-ui packages
                         '@radix-ui/react-accordion',
                         '@radix-ui/react-alert-dialog',
+                        // ... etc
                         'lucide-react',
                         'cmdk',
                         'sonner',
@@ -35,7 +37,11 @@ export default defineConfig(({ mode }) => ({
                         'tailwind-merge',
                         'date-fns',
                     ],
-                    heavy: ['recharts', 'p5', '@tanstack/react-query'],
+
+                    // Only include runtime dependencies, not type packages
+                    charts: ['recharts'],
+                    p5: ['p5'], // Remove @types/p5 from here
+                    query: ['@tanstack/react-query'],
                 },
             },
         },
